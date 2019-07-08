@@ -56,3 +56,4 @@ typings/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+src/api/config.js
