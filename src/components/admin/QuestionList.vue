@@ -3,36 +3,41 @@
     <div class="list__search">
       <v-text-field v-model="searchQuery" v-validate="'required'" label="Search" required box></v-text-field>
     </div>
-    <div
-      @click="selectQuestion(question.id)"
-      v-for="question in filteredQuestions"
-      :key="question"
-      class="list_question"
-      v-show="parseInt(filter) === question.range || !filter"
-    >
-      <v-card class="question__card">
-        <v-card-title class="question__title__top lighten-2" :class="getColor(question.level)">
-          <div class="question__title__container">
-            <div class="question__image" :style="{backgroundImage: 'url(' + question.image + ')'}"></div>
-            <h2 class="display-1 white--text font-weight-light">{{ question.name }}</h2>
+    <div class="list__questions">
+      <div
+        @click="selectQuestion(question.id)"
+        v-for="question in filteredQuestions"
+        :key="question"
+        class="list_question"
+        v-show="parseInt(filter) === question.range || !filter"
+      >
+        <v-card class="question__card">
+          <v-card-title class="question__title__top lighten-2" :class="getColor(question.level)">
+            <div class="question__title__container">
+              <div
+                class="question__image"
+                :style="{backgroundImage: 'url(' + question.image + ')'}"
+              ></div>
+              <h2 class="display-1 white--text font-weight-light">{{ question.name }}</h2>
+            </div>
+            <v-btn class="question__range" fab small dark :color="getRange(question.range).color">
+              <v-icon dark>bubble_chart</v-icon>
+            </v-btn>
+          </v-card-title>
+          <v-container>
+            <h3 class="question__title">{{ question.department }}</h3>
+            <p class="question__description">{{ question.description }}</p>
+          </v-container>
+          <div class="question__CTA">
+            <v-btn @click="deleteQuestion(question)" dark color="red">Delete</v-btn>
+            <v-btn
+              @click="$router.push({name: 'updateQuestion', params: {question: question}})"
+              dark
+              color="green"
+            >Update</v-btn>
           </div>
-          <v-btn class="question__range" fab small dark :color="getRange(question.range).color">
-            <v-icon dark>bubble_chart</v-icon>
-          </v-btn>
-        </v-card-title>
-        <v-container>
-          <h3 class="question__title">{{ question.department }}</h3>
-          <p class="question__description">{{ question.description }}</p>
-        </v-container>
-        <div class="question__CTA">
-          <v-btn @click="deleteQuestion(question)" dark color="red">Delete</v-btn>
-          <v-btn
-            @click="$router.push({name: 'updateQuestion', params: {question: question}})"
-            dark
-            color="green"
-          >Update</v-btn>
-        </div>
-      </v-card>
+        </v-card>
+      </div>
     </div>
   </div>
 </template>
@@ -148,6 +153,7 @@ export default {
   background-color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
 }
