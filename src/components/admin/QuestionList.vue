@@ -149,11 +149,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss" scoped>
+.list {
+  &__questions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .list_section {
   background-color: white;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
