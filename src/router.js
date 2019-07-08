@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 import Admin from './views/Admin'
 import manage from 'components/admin/manage.routes'
 import updateQuestion from 'components/admin/updateQuestion/updateQuestion.routes'

@@ -7,15 +7,10 @@ import router from './router'
 
 import store from './store'
 import './registerServiceWorker'
-// import Materials from 'vue-materials'
-// import 'materialize-css/dist/css/materialize.css'
-// import 'materialize-css/dist/js/materialize.js'
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
 Vue.use(VeeValidate)
-
-// Vue.use(Materials)
 
 new Vue({
   router,
