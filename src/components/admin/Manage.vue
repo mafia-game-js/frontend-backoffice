@@ -28,7 +28,9 @@
       </div>
       <div class="create">
         <div class="row">
-          <v-btn @click="showCreate = true" v-show="showCreate === false" dark color="teal">Create</v-btn>
+          <v-btn fab @click="showCreate = true" v-show="showCreate === false" dark color="teal">
+            <v-icon>add</v-icon>
+          </v-btn>
         </div>
       </div>
     </div>
@@ -133,6 +135,9 @@ export default {
 }
 .create {
   margin: 2em 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 .forms {
   display: flex;
