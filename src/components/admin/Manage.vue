@@ -8,14 +8,15 @@
           @click="filter = field"
           v-show="showCreate === false"
         >
-          <v-btn v-show="field === '0'" dark color="green">First Question | {{number}}</v-btn>
-          <v-btn v-show="field === '1'" dark color="pink">Beggining | {{number}}</v-btn>
-          <v-btn v-show="field === '2'" dark color="teal">Ending | {{number}}</v-btn>
-          <v-btn v-show="field === '3'" dark color="cyan">New Stage | {{number}}</v-btn>
-          <v-btn v-show="field === '4'" dark color="black">Grave | {{number}}</v-btn>
-          <v-btn v-show="field === '5'" dark color="purple">Related | {{number}}</v-btn>
+          <v-btn v-show="field === '0'" dark color= "orange">First Question | {{number}}</v-btn>
+          <v-btn v-show="field === '1'" dark color="green darken-2">Beggining | {{number}}</v-btn>
+          <v-btn v-show="field === '2'" dark color="yellow darken-4">Half | {{number}}</v-btn>
+          <v-btn v-show="field === '3'" dark color="red darken-4">Ending | {{number}}</v-btn>
+          <v-btn v-show="field === '4'" dark color="light-blue">New Stage | {{number}}</v-btn>
+          <v-btn v-show="field === '5'" dark color="black">Grave | {{number}}</v-btn>
+          <v-btn v-show="field === '6'" dark color="lime darken-3">Related | {{number}}</v-btn>
         </div>
-        <v-btn dark color="grey">All | {{totalOfQuestions}}</v-btn>
+        <v-btn  @click="filter = null" dark color="grey">All | {{totalOfQuestions}}</v-btn>
       </div>
       <div class="manage_game_settings">
         <div class="manage_game_settings_input">

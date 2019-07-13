@@ -66,9 +66,9 @@ export default {
     getColor(level) {
       switch (level) {
         case 1:
-          return 'blue'
+          return 'green'
         case 2:
-          return 'orange'
+          return 'yellow'
         case 3:
           return 'red'
         default:
@@ -78,17 +78,17 @@ export default {
     getRange(range) {
       switch (range) {
         case 1:
-          return { text: 'Begin', color: 'green' }
+          return { text: 'Begin', color: 'green darken-4' }
         case 2:
-          return { text: 'Half', color: 'orange' }
+          return { text: 'Half', color: 'yellow darken-4' }
         case 3:
-          return { text: 'End', color: 'indigo' }
+          return { text: 'End', color: 'red darken-4' }
         case 4:
-          return { text: 'New', color: 'light-blue' }
+          return { text: 'New', color: 'blue' }
         case 5:
           return { text: 'Grave', color: 'black' }
         case 6:
-          return { text: 'Related', color: 'lime darken-3' }
+          return { text: 'Related', color: 'lime darken-4' }
       }
     },
     selectQuestion(id) {
@@ -304,7 +304,6 @@ export default {
   font-size: 20px;
   margin-right: 15px;
 }
-
 .list__search {
   width: 100%;
   max-width: 600px;
