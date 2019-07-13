@@ -9,7 +9,7 @@
           v-show="showCreate === false"
         >
           <v-btn v-show="field === '0'" dark color= "orange">First Question | {{number}}</v-btn>
-          <v-btn v-show="field === '1'" dark color="green darken-4">Beggining | {{number}}</v-btn>
+          <v-btn v-show="field === '1'" dark color="green darken-2">Beggining | {{number}}</v-btn>
           <v-btn v-show="field === '2'" dark color="yellow darken-4">Half | {{number}}</v-btn>
           <v-btn v-show="field === '3'" dark color="red darken-4">Ending | {{number}}</v-btn>
           <v-btn v-show="field === '4'" dark color="light-blue">New Stage | {{number}}</v-btn>
