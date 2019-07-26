@@ -15,6 +15,7 @@ const state = {
   }
 }
 
+
 // getters
 const getters = {
   settings: state => state.settings

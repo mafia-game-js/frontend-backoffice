@@ -10,6 +10,7 @@
         :key="question"
         class="list_question"
         v-show="parseInt(filter) === question.range || !filter"
+        
       >
         <v-card class="question__card">
           <v-card-title class="question__title__top lighten-2" :class="getColor(question.level)">

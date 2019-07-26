@@ -8,6 +8,7 @@ export default class Question {
     this.level = 1
     this.image = null
     this.answers = []
+    
   }
 
   parse(question) {

@@ -49,6 +49,7 @@
         label="Box textarea"
         v-model="question.description"
         counter
+        
       ></v-textarea>
       <div class="row question__form__description">
         <v-select v-model="question.level" :items="level" box label="Level"></v-select>
