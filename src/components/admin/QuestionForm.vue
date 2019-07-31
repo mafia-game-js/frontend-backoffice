@@ -17,7 +17,7 @@
         <v-text-field
           v-model="currentImage"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
+          :error-messages="errors.collect('image')"
           label="CDN image"
           data-vv-name="questionImage"
           required
@@ -33,11 +33,20 @@
           box
         ></v-text-field>
         <v-text-field
-          v-model="question.department"
+          v-model="question.hierarchy"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
-          label="Department"
-          data-vv-name="questionDepartment"
+          :error-messages="errors.collect('hierarchy')"
+          label="Hierarchy"
+          data-vv-name="questionHierarchy"
+          required
+          box
+        ></v-text-field>
+        <v-text-field
+          v-model="question.organization"
+          v-validate="'required'"
+          :error-messages="errors.collect('organization')"
+          label="Organization"
+          data-vv-name="questionOrganization"
           required
           box
         ></v-text-field>
@@ -46,10 +55,9 @@
         class="question__form__description"
         box
         name="questionDescription"
-        label="Box textarea"
-        v-model="question.description"
+        label="Decision"
+        v-model="question.decision"
         counter
-        
       ></v-textarea>
       <div class="row question__form__description">
         <v-select v-model="question.level" :items="level" box label="Level"></v-select>

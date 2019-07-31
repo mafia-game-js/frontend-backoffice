@@ -6,7 +6,7 @@ import { settings as APIsettings } from 'api'
 const state = {
   settingsEncoded: '',
   settings: {
-    happiness: 35,
+    influence: 35,
     money: 25,
     time: 0,
     current_stage: 0,
@@ -47,7 +47,7 @@ const actions = {
 const mutations = {
   [types.INIT_SETTINGS](state) {
     state.settings = {
-      happiness: 35,
+      influence: 35,
       money: 0,
       time: 0,
       current_stage: 0,
@@ -65,12 +65,12 @@ const mutations = {
   },
   [types.UPDATE_SETTINGS](state, answer) {
     if (
-      state.settings.happiness <= 55 ||
-      state.settings.happiness >= 0 ||
-      (state.settings.happiness < 0 && answer > 0) ||
-      (state.settings.happiness > 55 && answer < 0)
+      state.settings.influence <= 55 ||
+      state.settings.influence >= 0 ||
+      (state.settings.influence < 0 && answer > 0) ||
+      (state.settings.influence > 55 && answer < 0)
     ) {
-      state.settings.happiness += answer.happiness
+      state.settings.influence += answer.influence
     }
     state.settings.money += answer.money
     state.settings.time += answer.time

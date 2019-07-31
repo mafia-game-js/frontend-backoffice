@@ -4,10 +4,10 @@
       <div class="question_form_top">
         <v-text-field
           class="answer__text-field"
-          v-model="answer.label"
+          v-model="answer.response"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
-          label="Label"
+          :error-messages="errors.collect('response')"
+          label="Response"
           data-vv-name="anwerLabel"
           required
           box
@@ -19,7 +19,7 @@
           class="answer__text-field"
           v-model="answer.time"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
+          :error-messages="errors.collect('time')"
           label="Time"
           data-vv-name="answerTime"
           required
@@ -28,11 +28,11 @@
         <v-text-field
           type="number"
           class="answer__text-field"
-          v-model="answer.happiness"
+          v-model="answer.influence"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
-          label="Happiness"
-          data-vv-name="answerHappiness"
+          :error-messages="errors.collect('influence')"
+          label="Influence"
+          data-vv-name="answerInfluence"
           required
           box
         ></v-text-field>
@@ -43,7 +43,7 @@
           class="answer__text-field"
           v-model="answer.money"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
+          :error-messages="errors.collect('money')"
           label="Money"
           data-vv-name="answerMoney"
           required
@@ -55,7 +55,7 @@
           @click="showListRelated = true"
           v-model="answer.question_related"
           v-validate="'required'"
-          :error-messages="errors.collect('name')"
+          :error-messages="errors.collect('question_related')"
           label="Question Related"
           data-vv-name="answerQuestionRelated"
           required
@@ -110,7 +110,7 @@ export default {
         this.answer = {
           id: this.currentAnswer.id,
           label: this.currentAnswer.label,
-          happiness: this.currentAnswer.happiness,
+          influence: this.currentAnswer.influence,
           money: this.currentAnswer.money,
           question_related: this.currentAnswer.question_related,
           time: this.currentAnswer.time
@@ -129,7 +129,7 @@ export default {
     },
     createOrUpdateAnswer() {
       if (this.submit === 'Create') {
-        if (this.answer.label && this.answer.time && this.answer.money && this.answer.happiness) {
+        if (this.answer.response && this.answer.time && this.answer.money && this.answer.influence) {
           if (this.questionId) {
             this.answer.questionId = this.questionId
             APIquestion.createAnswer(this.answer).then(() => {})
