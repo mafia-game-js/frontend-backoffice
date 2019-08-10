@@ -4,10 +4,10 @@
       <div class="question_form_top">
         <v-text-field
           class="answer__text-field"
-          v-model="answer.response"
+          v-model="answer.label"
           v-validate="'required'"
-          :error-messages="errors.collect('response')"
-          label="Response"
+          :error-messages="errors.collect('label')"
+          label="Label"
           data-vv-name="anwerLabel"
           required
           box
@@ -53,7 +53,7 @@
           type="number"
           class="answer__text-field"
           @click="showListRelated = true"
-          v-model="answer.question_related"
+          v-model="answer.questionRelated"
           v-validate="'required'"
           :error-messages="errors.collect('question_related')"
           label="Question Related"
@@ -129,7 +129,7 @@ export default {
     },
     createOrUpdateAnswer() {
       if (this.submit === 'Create') {
-        if (this.answer.response && this.answer.time && this.answer.money && this.answer.influence) {
+        if (this.answer.label && this.answer.time && this.answer.money && this.answer.influence) {
           if (this.questionId) {
             this.answer.questionId = this.questionId
             APIquestion.createAnswer(this.answer).then(() => {})

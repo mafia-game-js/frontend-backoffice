@@ -28,7 +28,7 @@
           <v-container>
             <h3 class="question__title">{{ question.hierarchy }}</h3>
             <h4 class="question__title">{{ question.organization }}</h4>
-            <p class="question__description">{{ question.decision }}</p>
+            <p class="question__description">{{ question.description }}</p>
           </v-container>
           <div class="question__CTA">
             <v-btn @click="deleteQuestion(question)" dark color="red">Delete</v-btn>

@@ -25,6 +25,9 @@
         <div class="manage_game_settings_input">
           <v-text-field label="Money" suffix="$$" v-model="settings.money"></v-text-field>
         </div>
+         <div class="manage_game_settings_input">
+          <v-text-field label="Influence" suffix="points" v-model="settings.influence"></v-text-field>
+        </div>
         <v-btn @click="updateSettings()" dark color="teal">Update</v-btn>
       </div>
       <div class="create">

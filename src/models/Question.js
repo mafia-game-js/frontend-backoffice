@@ -4,7 +4,7 @@ export default class Question {
     this.name = null
     this.hierarchy = null
     this.organization = null
-    this.decision = null
+    this.description = null
     this.range = 1
     this.level = 1
     this.image = null
@@ -17,7 +17,7 @@ export default class Question {
     this.name = question.name
     this.hierarchy = question.hierarchy
     this.organization = question.organization
-    this.decision = question.decision
+    this.description = question.description
     this.image = question.image
     this.level = question.level || 'easy'
     this.range = question.range

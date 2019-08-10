@@ -55,8 +55,8 @@
         class="question__form__description"
         box
         name="questionDescription"
-        label="Decision"
-        v-model="question.decision"
+        label="Description"
+        v-model="question.description"
         counter
       ></v-textarea>
       <div class="row question__form__description">
