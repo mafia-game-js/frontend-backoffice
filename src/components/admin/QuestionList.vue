@@ -10,6 +10,7 @@
         :key="question"
         class="list_question"
         v-show="parseInt(filter) === question.range || !filter"
+        
       >
         <v-card class="question__card">
           <v-card-title class="question__title__top lighten-2" :class="getColor(question.level)">
@@ -25,7 +26,8 @@
             </v-btn>
           </v-card-title>
           <v-container>
-            <h3 class="question__title">{{ question.department }}</h3>
+            <h3 class="question__title">{{ question.hierarchy }}</h3>
+            <h4 class="question__title">{{ question.organization }}</h4>
             <p class="question__description">{{ question.description }}</p>
           </v-container>
           <div class="question__CTA">
